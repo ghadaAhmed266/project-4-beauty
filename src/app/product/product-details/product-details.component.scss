@@ -1,0 +1,30 @@
+$colorDefault:#fa869b;
+span {
+    padding-left: 5px;
+    color:$colorDefault;
+}
+h5{
+    padding-top: 15px;
+    border-top: 1px dashed #dddddd;
+}
+.quantity{
+    margin-bottom: 20px;
+    padding-top: 10px;
+   .btn{
+        background: #ffffff !important;
+        border: 1px solid #ced4da;
+    }
+    .form-control {
+    text-align: center;
+    width: 80px; 
+    border-right: none;
+    margin-left: calc(var(--bs-border-width) * -1);
+    border-radius: 0;
+}
+   
+}
+
+
+.details{
+    margin-top: 20px;
+}

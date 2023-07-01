@@ -1,0 +1,92 @@
+$colorDefault:#fa869b;
+
+.shop{//start section shop
+    .filter{//start filter part
+        .collection{
+            border:1px solid #dddddd;
+            padding:0 30px;
+            margin-bottom: 30px;
+            ul{
+                padding: 30px 0;
+                li a {
+                    color: #777777;
+                    padding-bottom: 10px;
+                    font-size: 16px;
+                    text-transform: capitalize;
+                    line-height: 18px;
+                }
+            }
+            
+        }
+        .collapse-title{
+            position: relative;
+            margin-top: 30px;
+        }
+        .collapse-title:after {
+            position: absolute;
+            display: block;
+            bottom: 1px;
+            right: -3px;
+            content: "";
+            font-family: FontAwesome;
+            color: #444444;
+            font-size: x-large;
+        }
+    }
+    .shop-products{//start products part
+        .summary{
+            
+    padding-top: 35px;
+    padding-bottom: 35px;
+            h4 {
+                /////
+                color: #444444;
+                font-weight: 600;
+                margin-bottom: 15px;
+            }
+            h5{
+                color: #444444;
+                margin-bottom: 10px;
+                text-transform:none;
+            }
+        }
+        .products-control{//the products controls
+            margin: 50px 0;
+            .page-link{
+                $component-active-color:$colorDefault;
+                padding:              1rem 1.75rem;
+                border-radius:          0;
+                color:                  #777777;
+                $pagination-active-color:$colorDefault;
+                fa-icon{
+                    font-size: 18px;
+                    font-weight: 700;
+                }
+            }
+            .page-link:focus {
+                z-index: 3;
+                background-color: #e9ecef;
+                outline: 0;
+            }
+            .page-link:hover {
+                z-index: 2;
+                background-color:#f8f9fa;
+                border-color: #dddddd;
+            }
+            .page-link:active{
+                color: $colorDefault;
+                background-color: #ffffff;
+                border-color: #dddddd;
+            }
+            li:last-of-type{
+                width: 100%;
+                text-align: end;
+                .page-link:hover, .page-link:focus{
+                    z-index: 2;
+                    background-color:#ffffff;
+                    border-color: #dddddd;
+                }
+            }
+        }
+    }
+}

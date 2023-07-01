@@ -1,0 +1,88 @@
+<section class="shop">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-3 filter">
+                <div class="collection category">
+                    <div class="collapse-title dropdown-toggle" data-bs-toggle="collapse" href="#collapseExample" role="button" aria-expanded="true" aria-controls="collapseExample">
+                        <h4>Category</h4>
+                    </div>
+                    <ul>
+                        <li class="show" *ngFor="let category of categories" >
+                            <a class="dropdown-item">{{category.name}}</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="collection">
+                    <div class="collapse-title dropdown-toggle" data-bs-toggle="collapse" href="#collapseExample" role="button" aria-expanded="true" aria-controls="collapseExample">
+                        <h4>brand</h4>
+                    </div>
+                    <ul>
+                        <li class="show" *ngFor="let brand of brands" [value]="brand.id" (click)="selectBrand(brand.id)">
+                            <a class="dropdown-item">{{brand.name}}</a>
+                        </li>
+                    </ul>
+
+                    <div class="collapse-title dropdown-toggle" data-bs-toggle="collapse" href="#collapseExample" role="button" aria-expanded="true" aria-controls="collapseExample">
+                        <h4>price</h4>
+                    </div>
+                    <ul>
+                        <li class="show" *ngFor="let category of categories" >
+                            <a class="dropdown-item">{{category.name}}</a>
+                        </li>
+                    </ul>
+                </div>
+                
+            </div>
+            <div class="col-lg-9 shop-products">
+                <div class="banner">
+                            <img src="../../../assets/collection-banner.jpg" class="img-fluid" alt="">
+                </div>
+                <div class="summary">
+                    <h4>Beauty</h4>
+                    <h5>Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium</h5>
+                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+                
+                </div>
+                <div class="products-list">
+                    <div class="row">
+                        <div class="col-md-6 col-xl-3 product" *ngFor="let product of products|slice:startId.value:lastId.value+1;" routerLink="../product/{{product.id}}">
+                            <div class="img">
+                                <img class="img-fluid" src="../../assets/{{product.imageName}}" alt="">
+                            </div>
+                            <div class="data">
+                                <h6>{{product.name}}</h6>
+                                <h4>${{(product.price-product.discount)}}<del>${{product.price}}</del></h4>
+                            </div>
+                            <div class="new" *ngIf="product.new">new
+                            </div>
+                            <div class="cart-list">
+                                <fa-icon [icon]="faShoppingCart"></fa-icon>
+                                <fa-icon [icon]="faHeart"></fa-icon>
+                                <fa-icon [icon]="faRandom"></fa-icon>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="products-control">
+                    <nav aria-label="Page navigation example">
+                        <ul class="pagination justify-content-center">
+                          <li class="page-item ">
+                            <a class="page-link" (click)="prevCollection()"><fa-icon [icon]="faprev"></fa-icon></a>
+                          </li>
+                          <li class="page-item" *ngFor="let index of counter ">
+                            <a class="page-link"  (click)="specialCollection(index)">{{index}}</a>
+                          </li>
+                          <li class="page-item" >
+                            <a class="page-link" (click)="nextCollection()"><fa-icon [icon]="fanext"></fa-icon></a>
+                          </li>
+                          <li class="page-item">
+                            <a  class="page-link" style="cursor: text;">Showing Products {{startId.value+1}}-{{lastId.value+1}} of {{products.length}}</a>
+                            </li>
+                        </ul>
+                      </nav>
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

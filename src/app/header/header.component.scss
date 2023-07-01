@@ -1,0 +1,39 @@
+$colorDefault:#fa869b;
+$colorBackground:#f8f8f8;
+$colorFont:#999;
+.header-one{
+   .nav-item{ 
+    color: $colorFont;
+    padding-right: 25px;
+    .phone{color: $colorDefault;font-size: 12px;}
+    a{
+        color: $colorFont;
+    }
+   }
+}
+.header-two{
+    .navbar-toggler{border:0;margin-right: 10px;}
+    a{display: block;
+    color: #222;
+    font-weight: 400;
+    line-height: 23px;
+    text-decoration: none;
+    text-transform: uppercase;
+    padding: 42px 45px 42px 0;
+    letter-spacing: .07em;
+    fa-icon{
+        font-size: 20px;
+    }
+    }
+}
+.header-one,.header-two{.nav-item{ 
+    a{
+        cursor: pointer;
+        text-decoration: none;
+        font-size: 14px;
+    }
+    a:hover,a:active{color: $colorDefault;}
+}}
+.navbar-expand-lg .navbar-nav {
+    align-items: center;
+}

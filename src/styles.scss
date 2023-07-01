@@ -1,0 +1,178 @@
+/* You can add global styles to this file, and also import other style files */
+
+/* Importing Bootstrap SCSS file. */
+@import 'bootstrap/scss/bootstrap';
+$colorDefault:#fa869b;
+$colorBackground:#f8f8f8;
+$colorFont:#999;
+@font-face {
+    font-family: 'Lato';
+    src: url('assets/Lato-Regular.ttf');
+  }
+body {
+    font-family: 'Lato',sans-serif;
+    position: relative;
+    background: #ffffff;
+    font-size: 14px;
+    overflow-x: hidden;
+    min-width: unset!important;
+}
+section{padding-top: 70px;}
+fa-icon{
+    cursor: pointer;
+    font: 14px/1 FontAwesom;
+    padding-right: 5px;font-smoothing: antialiased;   
+     text-rendering: auto;
+}
+fa-icon:hover{
+    color: $colorDefault;
+}
+h1,h2,h3,h4,h5,h6{margin-bottom: 0.5rem;text-transform: capitalize;}
+h1,h2,h5{
+    color: #222;
+    font-weight: 700;
+}
+h1,h2{
+    text-transform: uppercase;
+}
+h1{
+    font-size: 60px;
+}
+h2{
+    font-size: 36px;
+    line-height: 1;
+    letter-spacing: .02em;
+}
+h4,h6,p{color: #777;}
+h4{
+    font-size: 18px;
+    font-weight: 400;
+    letter-spacing: .03em;
+    line-height: 1;}
+h5 {
+    font-size: 16px;
+    line-height: 24px;
+    letter-spacing: .05em;
+}
+h6 {
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+}
+p {
+    font-size: 14px;
+    line-height: 28px;
+    letter-spacing: .06em;
+}
+a {
+    transition: .5s ease;
+    text-decoration: none;
+    cursor: pointer;
+}
+del{
+    font-size: 14px;
+    color: #aaa;
+    font-weight: 400;
+    margin-left: 5px;
+}
+
+.btn {
+    line-height: 20px;
+    text-transform: uppercase;
+    font-size: 14px;
+    font-weight: 700;
+    border-radius: 0;
+    transition: .3s ease-in-out;
+}
+.btn-solid {
+    padding: 13px 29px;
+    color: #fff!important;
+    letter-spacing: .05em;
+    border: 2px solid $colorDefault!important;
+    background-image: linear-gradient(30deg,$colorDefault 50%,transparent 50%)!important;
+    background-size: 850px;
+    background-repeat: no-repeat;
+    background-position: 0;
+    transition: background .3s ease-in-out;
+}
+.btn-solid:focus {
+    color: #fff;
+}
+.btn-solid:hover {
+    background-position: 100%;
+    color: #000!important;
+    background-color: #fff;
+}
+.btn:focus {
+    box-shadow: none;
+}
+.btn:hover {
+    transition: .3s ease-in-out;
+}
+ul{
+    list-style: none;
+    margin-bottom: 0;
+    padding-left: 0
+}
+.product{
+    margin-top: 50px;
+    position: relative;
+    cursor: pointer;
+    h4 {
+        color: #222;
+        font-weight: 700;
+    }
+    .new{
+        position: absolute;
+        background-color: $colorDefault;
+        color: #fff;
+        border-radius: 100%;
+        text-align: center;
+        font-size: 13px;
+        font-weight: 700;
+        padding: 9px 4px;
+        text-transform: uppercase;
+        top: 7px;
+        left: 17px;
+        z-index: 1;
+    }
+    .cart-list{
+        position: absolute;
+        bottom: 60px;
+        text-align: center;
+        width: fit-content;
+        display: inline-block;
+        right: 10px;
+        justify-content: center;
+        opacity: 0;
+        transition: all 0.5s ease;
+        fa-icon{
+            display: block;
+            padding: 10px;
+            color: #6f6f6f;
+            font-size: 18px;
+        }
+        fa-icon:hover{
+            color: $colorDefault;
+        }
+    }
+    
+}
+.product:hover{
+    .cart-list{
+        opacity: 1;
+    }
+}
+@media (max-width: 991px){
+    h1{font-size: 36px;}
+    h2{font-size: 22px;}
+    h4{font-size: 16px;}
+    section{padding-top: 50px;}
+}
+@media (max-width: 767px){
+    section{padding-top: 40px;}
+}
+@media (max-width: 480px) {
+    h1{font-size: 28px;}
+    
+}
